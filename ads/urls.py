@@ -16,6 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ads_app import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
+    path('cat/', views.CatView.as_view()),
+    path('ads/', views.AdView.as_view()),
+    path('ads/<int:pk>/', views.AdsDetailView.as_view()),
+    path('cat/<int:pk>/', views.CategoryDetailView.as_view()),
+    path('load/', views.LoadCSV.as_view()),
 ]
