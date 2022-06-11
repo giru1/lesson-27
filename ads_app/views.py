@@ -7,7 +7,6 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import DetailView
-from sqlalchemy.dialects.mssql.information_schema import views
 
 from ads_app.models import Ads, Category
 
