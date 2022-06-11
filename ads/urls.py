@@ -25,5 +25,4 @@ urlpatterns = [
     path('ads/', views.AdView.as_view()),
     path('ads/<int:pk>/', views.AdsDetailView.as_view()),
     path('cat/<int:pk>/', views.CategoryDetailView.as_view()),
-    path('load/', views.LoadCSV.as_view()),
 ]

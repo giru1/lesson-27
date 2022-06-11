@@ -18,35 +18,6 @@ def index(request):
 
 
 @method_decorator(csrf_exempt, name='dispatch')
-class LoadCSV(View):
-    def get(self, request):
-        return JsonResponse({
-            "status": "ok"
-        })
-
-    def post(self, request):
-        with open('datasets/ads.csv', newline='', encoding='utf-8') as File:
-            reader = csv.reader(File)
-            print(type(reader))
-            count = 0
-            for row in reader:
-                count += 1
-                if count > 1:
-                    # ads = Ads.objects.create(
-                    #     name=row["name"],
-                    #     author=row["author"],
-                    #     price=row["price"],
-                    #     description=row["description"],
-                    #     address=row["address"],
-                    #     is_published=row["is_published"],
-                    # )
-                    print(row[1])
-        return JsonResponse({
-            "status": "ok"
-        })
-
-
-@method_decorator(csrf_exempt, name='dispatch')
 class AdView(View):
     def get(self, request):
         ads = Ads.objects.all()
