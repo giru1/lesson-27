@@ -42,7 +42,11 @@ class AdsAdmin(admin.ModelAdmin):
                 fields = x.split(",")
                 created = Ads.objects.update_or_create(
                     name=fields[0],
-                    balance=fields[1],
+                    author=fields[1],
+                    price=fields[2],
+                    description=fields[3],
+                    address=fields[4],
+                    is_published=fields[5],
                 )
             url = reverse('admin:index')
             return HttpResponseRedirect(url)
