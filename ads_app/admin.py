@@ -53,7 +53,7 @@ class AdsAdmin(admin.ModelAdmin):
 
         form = CsvImportForm()
         data = {"form": form}
-        return render(request, "admin/ads_app/ads/load_csv.html", data)
+        return render(request, "admin/ads_app/ads/../templates/admin/load_csv.html", data)
 
 
 # @admin.register(Category)
