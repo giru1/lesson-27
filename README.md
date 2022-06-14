@@ -2,6 +2,10 @@
 
 poetry install - установка зависимостей
 
-python manage.py migration - запуск миграций
+python manage.py migrate - запуск миграций
 
 python manage.py runserver - запуск сервера
+
+python manage.py load_ads - загрузка объявление
+
+python manage.py load_category - загрузка категорий
